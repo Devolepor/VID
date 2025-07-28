@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            flex: 1;
+            width: 100%;
+            border-radius: 0;
+            background-color: white;
+            padding: 2rem 1.5rem;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            font-weight: 700;
+            color: #00698f;
+            margin-bottom: 2rem;
+        }
+
+        .form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            color: #666;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            outline: 0;
+            background-color: #f7f7f7;
+            padding: 1rem 1.2rem;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .input-group input:focus {
+            border-color: #00698f;
+        }
+
+        .forgot {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        .forgot a,
+        .signup a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .forgot a:hover,
+        .signup a:hover {
+            text-decoration: underline #00698f;
+        }
+
+        .sign {
+            display: block;
+            width: 100%;
+            background-color: #00698f;
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+            border: none;
+            border-radius: 200px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: auto;
+            transition: background-color 0.3s;
+        }
+
+        .sign:hover {
+            background-color: #005a7a;
+        }
+
+        .social-message {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 1.5rem;
+        }
+
+        .line {
+            height: 1px;
+            flex: 1;
+            background-color: #ccc;
+        }
+
+        .social-message .message {
+            padding: 0 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            overflow: hidden;
+        }
+
+        .social-icons .icon:hover {
+            background-color: #e0e0e0;
+        }
+
+        .social-icons .icon img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .signup {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+            }
+            
+            .form-container {
+                flex: 0 1 auto;
+                max-width: 400px;
+                border-radius: 0.75rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <p class="title">Login</p>
+        <form class="form">
+            <div class="input-group">
+                <label for="username">Email or Phone</label>
+                <input type="text" name="username" id="username" placeholder="Enter your email or phone" />
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" />
+                <div class="forgot">
+                    <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                </div>
+            </div>
+            <button type="button" class="sign">Sign in</button>
+        </form>
+        <div class="social-message">
+            <div class="line"></div>
+            <p class="message">Login with social accounts</p>
+            <div class="line"></div>
+        </div>
+        <div class="social-icons">
+            <button aria-label="Log in with Google" class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Google logo">
+            </button>
+            <button aria-label="Log in with Facebook" class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook logo">
+            </button>
+        </div>
+        <p class="signup">
+            Don't have an account?
+            <a rel="noopener noreferrer" href="#">Sign up</a>
+        </p>
+    </div>
+</body>
+</html>
